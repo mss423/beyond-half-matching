@@ -1,0 +1,16 @@
+{
+  "edition": "neurips-2026",
+  "title": "Beyond the Half-Approximation: Fair and Efficient Online Class Matching",
+  "authors": [
+    "Sander Borst",
+    "Max Springer"
+  ],
+  "prepared": "2026-11-05",
+  "sourceStatus": "confirmed",
+  "frozen": true,
+  "canonicalUrl": "https://mss423.github.io/beyond-half/neurips-2026/",
+  "pdf": "neurips_2026.pdf",
+  "pdfSha256": "519a47cd57f532b78bda8cc449ee6c82f4be81cbe68148fc636c9c3666e51b48",
+  "sourceFingerprint": "d92bf28df22a23c1c839b09ce68280f3cc5eb638a72c889e749966ad7ade9c6d",
+  "webpageCredit": "Astra was used to generate this webpage from the authors’ paper."
+}

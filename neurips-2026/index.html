@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Read the paper through its statements, proofs, and dependency map.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://mss423.github.io/beyond-half/neurips-2026/">
+  <meta property="og:title" content="Beyond the Half-Approximation · Proof explorer">
+  <meta property="og:description" content="An interactive companion to the paper by Sander Borst and Max Springer.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mss423.github.io/beyond-half/neurips-2026/">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <title>Beyond the Half-Approximation · Proof explorer</title>
+  <link rel="stylesheet" href="./vendor/katex.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="#" aria-label="Proof explorer home"><span class="brand-mark" aria-hidden="true">↗</span><span><span class="eyebrow">A VISUAL PAPER</span><span class="brand-title">Beyond the Half-Approximation</span></span></a>
+    <div class="header-actions"><span class="edition-status"><span aria-hidden="true"></span>NeurIPS 2026 edition</span><a class="quiet-link" href="./neurips_2026.pdf" target="_blank" rel="noopener">Frozen paper PDF ↗</a><button id="theme" class="icon-button" title="Toggle color theme" aria-label="Toggle color theme">◐</button></div>
+  </header>
+  <div class="workspace" id="workspace">
+    <section class="map-pane" aria-label="Proof dependency map">
+      <div class="map-heading"><div><span class="eyebrow">THE ARGUMENT, CONNECTED</span><h1>Explore the proofs</h1></div><button id="hide-map" class="text-button" title="Hide graph (G)">Read only <span aria-hidden="true">→</span></button></div>
+      <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a result or a source label…" aria-label="Search results"><kbd>/</kbd></label>
+      <div class="map-filters"><label class="sr-only" for="section-filter">Section</label><select id="section-filter"><option value="">All sections</option></select><div class="segmented" aria-label="Map view"><button data-mode="main" class="active" aria-pressed="true">Main</button><button data-mode="all" aria-pressed="false">All</button><button data-mode="focus" aria-pressed="false">Focus</button></div></div>
+      <div class="graph-shell"><div id="graph" role="img" aria-label="Interactive proof map. Use the result outline below for keyboard navigation."></div><div class="graph-controls"><button id="zoom-out" title="Zoom out" aria-label="Zoom out">−</button><button id="fit" title="Fit map" aria-label="Fit map">⊡</button><button id="zoom-in" title="Zoom in" aria-label="Zoom in">+</button></div><div id="graph-empty" hidden>No results match this view.</div></div>
+      <div class="map-foot"><span><i class="edge-symbol" aria-hidden="true"></i>Used to prove <span aria-hidden="true">→</span></span><span id="graph-count"></span><button id="export-svg" class="text-button">Export SVG ↓</button></div>
+      <details class="outline-details" id="outline-details"><summary>Result outline <span id="outline-count"></span></summary><nav id="outline" aria-label="Result outline"></nav></details>
+      <footer class="map-links"><a href="./proof-map.svg" target="_blank" rel="noopener" download>Full proof map ↓</a><button id="about" class="text-button">About this edition</button></footer>
+    </section>
+    <div class="divider" id="divider" role="separator" tabindex="0" aria-label="Resize map and reading panes" aria-orientation="vertical" aria-valuemin="28" aria-valuemax="65" aria-valuenow="48"></div>
+    <main class="reader-pane" id="reader-pane">
+      <div class="reader-toolbar"><button id="show-map" class="text-button" hidden>← Show map</button><span id="reader-breadcrumb">Select a result</span><div class="reader-tools"><button id="font-smaller" class="icon-button" title="Smaller text" aria-label="Smaller text">A−</button><button id="font-larger" class="icon-button" title="Larger text" aria-label="Larger text">A+</button><button id="copy-link" class="icon-button" title="Copy result link" aria-label="Copy result link">↗</button></div></div>
+      <article id="reader" aria-live="polite"></article>
+    </main>
+  </div>
+  <footer class="site-credit" aria-label="Authorship and webpage attribution">
+    <p>Paper and research results by <strong>Sander Borst</strong> and <strong>Max Springer</strong>.</p>
+    <p class="astra-credit">Astra was used to generate this webpage from their paper.</p>
+  </footer>
+  <dialog id="notation-dialog"><button class="dialog-close" aria-label="Close notation card">×</button><div id="notation-content"></div></dialog>
+  <dialog id="about-dialog"><button class="dialog-close" aria-label="Close edition information">×</button><span class="eyebrow">ABOUT THIS EDITION</span><h2>A source-linked reading companion</h2><p>This edition connects statements to their proofs and supporting results. Open a node to read its statement, inspect its source, and follow the proof steps.</p><p>The frozen NeurIPS paper PDF is the reference for this edition. Statements and proof passages are extracted from the same source; numbered steps provide navigation through the paper’s proofs.</p><p><a href="./neurips_2026.pdf">Download the frozen paper PDF ↗</a> · <a href="./THIRD_PARTY_LICENSES.txt">Third-party licences</a></p><p class="small-note">Arrow direction: an input points to the result that uses it. Graph position and distance do not represent mathematical quantities.</p></dialog>
+  <div id="toast" role="status" hidden></div>
+  <script src="./data.js"></script>
+  <script src="./vendor/cytoscape.min.js"></script>
+  <script src="./vendor/dagre.min.js"></script>
+  <script src="./vendor/cytoscape-dagre.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
